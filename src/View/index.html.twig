@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+{% block title %}Language{% endblock %}
+{% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Tools</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Language</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Framework</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">IDE</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        {% for product in products %}
+            <div class="col-sm-4">
+                <div class="card text-light bg-dark mt-5 mb-5" >
+                    <div class="card-title text-center"> {{ product }}</div>
+                    <div class="card-body bg-primary text-center">
+                       <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis arcu purus, ullamcorper
+                        consequat urna vestibulum in. Sed sit amet massa scelerisque, lacinia eros at, ullamcorper
+                        lectus. Praesent nulla neque, auctor aliquam pretium vel, ornare nec est. Duis venenatis, nisi
+                        sit amet sollicitudin bibendum, dolor metus placerat augue, et cursus ipsum risus a ligula.
+                        Aenean fringilla magna eget lacus dignissim, eu varius urna tristique. Sed euismod elit ut odio
+                        congue, non bibendum lacus feugiat. Aenean ipsum nibh, hendrerit vitae volutpat ac, ultricies
+                        condimentum risus.</p>
+
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
